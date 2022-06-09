@@ -1,0 +1,41 @@
+.cnt
+{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    
+}
+.head
+{
+    height: 20%;
+    
+}
+.head h1
+{
+
+    text-align: center;
+    font-size:xx-large;
+    font-family: cursive;
+    margin-top: 5%;
+    font-weight: 900;
+}
+mat-form-field
+{
+    width: 100%;
+    font-size:large;
+    
+}
+.btn
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+input::placeholder
+{ 
+    text-align: center;
+}

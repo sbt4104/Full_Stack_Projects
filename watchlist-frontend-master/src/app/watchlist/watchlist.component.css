@@ -1,0 +1,13 @@
+.content{
+    position: absolute;
+    top: 10%;
+    
+}
+
+.mycontent
+{
+    position: relative;
+    width: 1000px;
+    color: black;
+}
+

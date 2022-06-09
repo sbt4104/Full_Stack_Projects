@@ -1,0 +1,30 @@
+
+<mat-card>
+    <mat-card-title style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center; ">{{mybanks.account_number}}</mat-card-title><br>
+    <mat-card-content style="font-size:large; font-family: cursive; text-align: center;"><b>{{mybanks.bank_name}}</b>
+    </mat-card-content>
+    <mat-card-content style="font-size:large; font-family: cursive; text-align: center;"><b>{{mybanks.ifsc_code}}</b>
+    </mat-card-content>
+    <mat-card-content style="font-size:large; font-family: cursive; text-align: center;"><b>{{mybanks.account_type}}</b>
+    </mat-card-content>
+    <mat-card-content style="font-size:large; font-family: cursive; text-align: center;"><b>{{mybanks.account_open}}</b>
+    </mat-card-content>
+    
+    <mat-card-actions>
+
+    <div class="button">
+    
+    <button  (click)="delete()" mat-fab><mat-icon class="icon">delete</mat-icon></button>
+    &nbsp;&nbsp;&nbsp;
+    <button  (click)="update()" mat-fab><mat-icon class="icon">settings</mat-icon></button>
+    <div *ngIf="mybanks.account_type == 'SECONDARY'">
+    &nbsp;&nbsp;&nbsp;
+    <button  (click)="makeprimary()" mat-fab><mat-icon class="icon">thumb_up_alt</mat-icon></button>
+    </div>
+  </div>
+  </mat-card-actions>
+  </mat-card>
+
+
+
+

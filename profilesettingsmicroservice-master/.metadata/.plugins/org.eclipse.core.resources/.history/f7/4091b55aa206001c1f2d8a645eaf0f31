@@ -1,0 +1,78 @@
+package com.natwest.BankMicroservice.user;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import com.natwest.BankMicroservice.model.PortFolio;
+import com.natwest.BankMicroservice.model.WatchList;
+import com.natwest.BankMicroservice.model.Bank;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+public class User {
+	@Id
+	String userId;
+		
+	Integer password;
+	String firstName;
+	String lastName;
+	String mobileNumber;
+		
+		
+		
+		public User(){
+			
+		}
+
+		
+		public User(String userId, Integer password, String firstName, String lastName, String mobileNumber,
+				List<PortFolio> portfolios, WatchList watchlist, Bank bank) {
+			
+			this.userId = userId;
+			this.password = password;
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.mobileNumber = mobileNumber;
+			
+		}
+
+
+		public String getUserId() {
+			return userId;
+		}
+		public void setUserId(String userId) {
+			this.userId = userId;
+		}
+		public Integer getPassword() {
+			return password;
+		}
+		public void setPassword(Integer password) {
+			this.password = password;
+		}
+		public String getFirstName() {
+			return firstName;
+		}
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
+		}
+		public String getLastName() {
+			return lastName;
+		}
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
+		}
+		public String getMobileNumber() {
+			return mobileNumber;
+		}
+		public void setMobileNumber(String mobileNumber) {
+			this.mobileNumber = mobileNumber;
+		}
+			}
+
+
+

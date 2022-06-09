@@ -1,0 +1,14 @@
+package com.natwest.usersettings.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class User {
+	String userId;
+	int password;
+	String firstName;
+	String lastName;
+	String mobileNumber;
+	
+
+}

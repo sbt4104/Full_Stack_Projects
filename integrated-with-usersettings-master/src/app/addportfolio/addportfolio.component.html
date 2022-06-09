@@ -1,0 +1,29 @@
+<!-- style="border: 2px red solid;" -->
+<div class="head">
+    <h1  style="text-align: center; margin-top: 5%;"><b>Please Enter the respective portfolio details</b></h1>
+</div>
+<div class="cnt" >
+    <!-- border: 3px blue solid; -->
+    <div style=" height:50vh;width:48%;">
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="name" name="name" placeholder="Enter the portfolio name"
+                [(ngModel)]="portfolio_obj.name" [formControl]="name" required>{{validateName()}}
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="password" name="description"
+                placeholder="Portfolio Description" type="text" [(ngModel)]="portfolio_obj.description"
+                [formControl]="description" required>{{validatedDescription()}}
+        </mat-form-field>
+        <br>
+        <div class="btn">
+            <span style="font-family: cursive; font-size:xx-large;"><b>Add this portfolio &nbsp;</b></span>
+            <button
+                (click)="save()" mat-fab>
+                <mat-icon>favorite</mat-icon>
+            </button>
+        </div>
+        <h1 style="font-size: larger; text-align: center;margin-top: 2%;"><b>{{errMessage}}</b></h1>
+
+    </div>
+</div>

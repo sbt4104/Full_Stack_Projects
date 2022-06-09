@@ -1,0 +1,35 @@
+<!-- style="border: 2px red solid;" -->
+<div class="head">
+    <h1  style="text-align: center; margin-top: 5%;"><b>Please Enter the respective Bank Details</b></h1>
+</div>
+<div class="cnt" >
+    <!-- border: 3px blue solid; -->
+    <div style=" height:50vh;width:48%;">
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="name" name="name" placeholder="Enter the  account number"
+                [(ngModel)]="bank_obj.account_number" [formControl]="account_number" required>{{ validateAccount()}}
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="password" name="description"
+                placeholder="Enter the Bank name" type="text" [(ngModel)]="bank_obj.bank_name"
+                [formControl]="bank_name" required>{{validateName()}}
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="password" name="description"
+                placeholder="Enter the IFSC Code" type="text" [(ngModel)]="bank_obj.ifsc_code"
+                [formControl]="bank_ifsc" required>{{validateIfsc()}}
+        </mat-form-field>
+        <br>
+        <div class="btn">
+            <span style="font-family: cursive; font-size:xx-large;"><b>Add this Bank &nbsp;</b></span>
+            <button
+                (click)="save()" mat-fab>
+                <mat-icon>account_balance</mat-icon>
+            </button>
+        </div>
+        <h1 style="font-size: larger; text-align: center;margin-top: 2%; color: red;"><b>{{errMessage}}</b></h1>
+    </div>
+    
+</div>

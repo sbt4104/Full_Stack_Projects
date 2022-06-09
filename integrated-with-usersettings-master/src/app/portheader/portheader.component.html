@@ -1,0 +1,25 @@
+
+<mat-toolbar class="HeaderToolbar" style=" margin: 0%; padding: 0%; background-color:indigo;">
+    <span class="title-center" style="color:white; ">Welcome to your Dashboard</span>
+</mat-toolbar>
+
+<button  class="mat-fab" (click)="addportfolio()" style="float: right; margin-top: -2.6%; margin-right: 10%; width:6%;height: 10%; 
+"  mat-fab>
+    <mat-icon style="align-self: center; ;" class="icon">add</mat-icon>
+</button>
+
+
+
+
+<!-- <div class="keep-c-toggle-view" >
+    <i *ngIf="isView" class="material-icons " (click)="switchToListView()">view_list</i>
+    <i *ngIf="!isView" class="material-icons " (click)="switchToGridView()">view_quilt</i>
+</div> -->
+
+<app-gridview></app-gridview>
+
+
+
+
+
+

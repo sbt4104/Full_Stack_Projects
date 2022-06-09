@@ -1,0 +1,25 @@
+<h1  style=" font-size:3em;text-align: center; margin-top: 1%;font-family: cursive;"><b>Update your bank details having account number:- {{acc_number}}</b></h1>
+
+<div style=" height:50vh;width:48%;" class="form">
+    <br>
+    <mat-form-field>
+        <input style="text-align: center;" matInput class="password" name="description"
+            placeholder="Enter the Bank name" type="text" [(ngModel)]="bank_obj.bank_name"
+            [formControl]="bank_name" required>{{validateName()}}
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input style="text-align: center;" matInput class="password" name="description"
+            placeholder="Enter the IFSC Code" type="text" [(ngModel)]="bank_obj.ifsc_code"
+            [formControl]="bank_ifsc" required>{{validateIfsc()}}
+    </mat-form-field>
+    <br>
+    <div class="btn">
+        <span style="font-family: cursive; font-size:xx-large;"><b>Update the Bank &nbsp;</b></span>
+        <button
+            (click)="update()" mat-fab>
+            <mat-icon>account_balance</mat-icon>
+        </button>
+    </div>
+    <h1 style="font-size: larger; text-align: center;margin-top: 2%; color: red;"><b>{{errMessage}}</b></h1>
+</div>

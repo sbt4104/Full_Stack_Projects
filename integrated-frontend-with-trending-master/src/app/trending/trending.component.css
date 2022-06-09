@@ -1,0 +1,26 @@
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+table {
+    font-family:'Times New Roman', 'Times', 'serif';
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  th{  
+      font-size: 1.2rem;
+      font-weight: bolder;
+  }
+  .gainer{
+      background-color: rgb(136, 201, 153);
+  }
+  .loser{
+      background-color: rgb(255, 153, 153);
+  }

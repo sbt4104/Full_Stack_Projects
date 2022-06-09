@@ -1,0 +1,34 @@
+<router-outlet></router-outlet>
+<!-- style="border: 2px red solid;" -->
+<div class="head" >
+    <h1 ><b>Welcome back our happy customer</b></h1>
+</div>
+<!-- style="border: 2px pink solid;" -->
+<div class="cnt" >
+    <!-- border: 3px blue solid; -->
+    <div style=" height:50vh;width:48%;margin-top: 6%;">
+       <h1 style="text-align: center;font-family:cursive">Enter your  respective credentials</h1>
+      
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="username" name="username" placeholder="Enter your email id" [formControl]="username"
+                required>{{validateName()}}
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input maxlength="4" minlength="4"  style="text-align: center;" matInput class="password" name="password" placeholder="Enter your PIN" type="password"
+                [formControl]="password" required>{{validatepassword()}}
+        </mat-form-field>
+        
+        
+        <div class="btn">
+            <button class="btn btn-primary btn-lg w-100"  (click)='signIn()'>Submit</button>
+        </div>
+        <br>
+        <h4 style="text-align: center;">Join us
+            <a  routerLink="/home/user/register" style="color:  blue; text-decoration: none;">
+               Register 
+          </a>
+          </h4>
+    </div>
+
+</div>

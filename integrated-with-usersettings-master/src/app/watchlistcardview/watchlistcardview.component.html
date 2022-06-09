@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title style="font-family:'Courier New', Courier, monospace; text-align: center; "><b>{{mywatchlist}}</b></mat-card-title><br>
+
+  <mat-card-actions>
+
+  <button  (click)="delete()" mat-fab><mat-icon class="icon">delete</mat-icon></button>
+  &nbsp; &nbsp;
+  <button  (click)="add_to_portfolio(mywatchlist)" mat-fab><mat-icon class="icon">add</mat-icon></button>
+
+</mat-card-actions>
+</mat-card>

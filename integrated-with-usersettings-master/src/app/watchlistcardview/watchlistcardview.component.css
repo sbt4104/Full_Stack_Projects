@@ -1,0 +1,31 @@
+mat-card {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 200px;
+    background-color: indigo;
+    color: ivory;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+mat-card:not([class*=mat-elevation-z]) 
+{
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,1), 
+                0 1px 1px 0 rgba(0,0,0,1), 
+                0 1px 3px 0 rgba(0,0,0,1);
+    justify-content: space-evenly ;
+}
+.button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly ;
+    background-color: red;
+   
+
+}

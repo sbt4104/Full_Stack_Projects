@@ -1,0 +1,44 @@
+<!-- style="border: 2px red solid;" -->
+
+<h1  style=" font-size:3em;text-align: center; margin-top: 1%;font-family: cursive;"><b>Add your stocks in :{{portname}}</b></h1>
+<div class="head">
+    <h1  style=" font-size:larger; margin-top: 1%; text-align: center; font-family: fantasy;"><b>Enter the Stock Details</b></h1>
+</div>
+<h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: larger; text-align: center;margin-top: 1%;"><b>{{errMessage}}</b></h1>
+<div class="cnt" >
+    <!-- border: 3px blue solid; -->
+    <div style=" height:50vh;width:48%;">
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="name" name="name" placeholder="Enter the Stock name"
+                [(ngModel)]="stock_obj.name" [formControl]="name" required>{{validateName()}}
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="password" name="description"
+                placeholder="Enter the quantity" type="number" [(ngModel)]="stock_obj.quantity"
+                [formControl]="quantity" required>{{validatedQuantity()}}
+        </mat-form-field>
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="password" name="mode"
+                placeholder="Enter the mode of operation(Buy/Sell)" type="text" [(ngModel)]="stock_obj.mode"
+                [formControl]="name" required>{{validateName()}}
+        </mat-form-field>
+        <mat-form-field>
+            <input style="text-align: center;" matInput class="password" name=""
+                placeholder="Price of the stock" type="number" [(ngModel)]="stock_obj.price"
+                [formControl]="quantity" required>{{validatedQuantity()}}
+        </mat-form-field>
+        <br>
+        <div class="btn">
+            <span style="font-family: cursive; font-size:xx-large;"><b>&nbsp;</b></span>
+            <button
+                (click)="save()" mat-fab>
+                <mat-icon>check_circle</mat-icon>
+            </button>
+        </div>
+
+    </div>
+</div>
+<img src="../../assets/Hero.png" alt=""width="50%" height="50%" style="display: block; margin-top: -30%;">
+
+

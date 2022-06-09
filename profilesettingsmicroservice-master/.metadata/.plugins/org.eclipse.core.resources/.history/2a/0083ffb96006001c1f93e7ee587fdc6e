@@ -1,0 +1,58 @@
+package com.natwest.BankMicroservice.userservice;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.natwest.BankMicroservice.exceptions.UserAlreadyPresentException;
+import com.natwest.BankMicroservice.exceptions.UserNotPresentException;
+import com.natwest.BankMicroservice.user.User;
+
+import com.natwest.BankMicroservice.userrepo.UserRepository;
+
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	UserRepository userrepo;
+	
+	@Override
+	public User addUser(User usrObj) throws UserAlreadyPresentException {
+		// TODO Auto-generated method stub
+		Optional<User> useropt= userrepo.findById(usrObj.getUserid());
+		
+		if(useropt.isPresent())
+		{		    	
+			throw new UserAlreadyPresentException("User is Already present");
+		}
+			userrepo.save(usrObj);
+			return usrObj;
+	}
+
+
+
+	@Override
+	public List<User> viewUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User viewbyId(String userId) throws UserNotPresentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User updateUser(User usrObj) throws UserNotPresentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteUser(String userId) throws UserNotPresentException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

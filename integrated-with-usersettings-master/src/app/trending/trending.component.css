@@ -1,0 +1,59 @@
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+table {
+    font-family:'Times New Roman', 'Times', 'serif';
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  th{  
+      font-size: 1.2rem;
+      font-weight: bolder;
+  }
+  .gainer{
+      background-color: rgb(136, 201, 153);
+  }
+  .loser{
+      background-color: rgb(255, 153, 153);
+  }
+  .HeaderToolbar
+{
+    justify-content: center;
+    font-size: 2rem;
+    height: 10%;
+    /* font-family: Garamond, serif; */
+  font-family: 'Courier New', Courier, monospace;
+}
+.btn
+{
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.keep-c-toggle-view 
+{
+    height: 20%;
+	margin-left: 95%;
+    margin-top: -2%;
+	cursor: pointer;
+}
+
+
+
+mat-card {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}

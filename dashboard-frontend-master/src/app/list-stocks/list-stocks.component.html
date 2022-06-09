@@ -1,0 +1,10 @@
+<h2 style="text-align: center; font-size: xx-large; margin-bottom: 10%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-top: 5%; text-decoration: solid; text-decoration:underline ">Your Stocks list:</h2>
+
+<h1 style="font-size: larger;"><b>{{errMessage}}</b></h1>
+
+
+<h1 *ngFor="let recipient of stockslist | keyvalue">
+    
+    <mat-card-content style="font-size:x-large; ;font-family: cursive; text-align: center;"><b>{{recipient.key}} --> {{recipient.value}}</b>
+    </mat-card-content>
+</h1>

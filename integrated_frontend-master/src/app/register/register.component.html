@@ -1,0 +1,51 @@
+<div class="head">
+  <h1><b>Register yourself</b></h1>
+</div>
+<!-- style="border: 2px pink solid;" -->
+<div class="cnt">
+  <!-- border: 3px blue solid; -->
+  <div style=" height:50vh;width:60%;margin-top: 6%;">
+    <mat-form-field >
+      <input style="text-align: center;" matInput class="FN" name="FN" placeholder="First Name" [formControl]="FN"
+        required>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field >
+      <input style="text-align: center;" matInput class="LN" name="LN" placeholder="Last Name" [formControl]="LN"
+        required>
+    </mat-form-field>
+    <br>
+    <mat-form-field >
+      <input style="text-align: center;" matInput class="email" name="email" placeholder="Email" [formControl]="email"
+        required>
+    </mat-form-field>&nbsp;
+    <mat-form-field >
+      <input maxlength="10" minlength="10" style="text-align: center;" matInput class="phone" name="phone"
+        placeholder="Phone no." [formControl]="phone" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field >
+      <input maxlength="4" minlength="4" style="text-align: center;" matInput class="pin1" name="pin1" placeholder="Pin"
+        [formControl]="pin1" required>
+    </mat-form-field>&nbsp;
+    <mat-form-field >
+      <input maxlength="4" minlength="4" style="text-align: center;" matInput class="pin2" name="pin2"
+        placeholder="Re-enter Pin " [formControl]="pin2" required>
+    </mat-form-field>
+    
+   
+
+    <div class="btn">
+      <button class="btn btn-primary btn-lg " (click)="signIn()">Register</button>
+    </div>
+    <br>
+    <h4 style="text-align: center;">Already our user
+      <a  routerLink="/home/user/login" style="color:  blue; text-decoration: none;">
+        Login Here 
+    </a>
+    </h4>
+    <br>
+    <h1>{{message}}</h1>
+
+  </div>
+</div>

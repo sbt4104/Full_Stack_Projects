@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-8" style="background-color:rgb(103, 13, 187);">
+      <h3>Register User</h3>
+      <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        
+        <input name="EMAIL ID" type="email" matInput placeholder="Enter Email"/>
+        <!--<textarea name="Email ID" matInput placeholder="Enter Email" ></textarea>-->
+      </mat-form-field>
+      
+      <table class="table" ><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+        <textarea name="First Name" matInput placeholder="First Name" ></textarea>
+        </mat-form-field></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+        <textarea name="Last Name" matInput placeholder="Last Name" ></textarea>
+        </mat-form-field></td>
+      </tr></table>
+      <mat-form-field class="example-full-width" appearance="fill">
+      <input name="Mobile Number" type="tel" matInput placeholder="10 digit Mobile number" />
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="example-full-width" appearance="fill">
+      <input name="Password" matInput placeholder="Enter 4 digit PIN" />
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="example-full-width" appearance="fill">
+      <input name="Re-Enter Password" matInput placeholder="Re-enter 4 digit pin" />
+      </mat-form-field>
+
+      <div >
+      <!--Button-->
+      <button class="noteSubmit" mat-button color="primary">Submit</button>
+    </div>
+    
+      
+    </form>
+    </div>
+   
+
+  </div>
+</div>
+    
+</body>
+</html>

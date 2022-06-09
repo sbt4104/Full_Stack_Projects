@@ -1,0 +1,16 @@
+package com.natwest.BankMicroservice.userservice;
+
+import java.util.List;
+
+import com.natwest.BankMicroservice.exceptions.UserNotPresentException;
+import com.natwest.BankMicroservice.exceptions.UserAlreadyPresentException;
+import com.natwest.BankMicroservice.user.User;
+
+public interface UserService {
+
+	User addUser(User usr) throws UserAlreadyPresentException;
+	List<User> viewUsers();
+	User viewbyId(String userId) throws UserNotPresentException;
+	User updateUser(User usrObj) throws UserNotPresentException;
+	//boolean deleteUser(String userId) throws UserNotPresentException;
+}

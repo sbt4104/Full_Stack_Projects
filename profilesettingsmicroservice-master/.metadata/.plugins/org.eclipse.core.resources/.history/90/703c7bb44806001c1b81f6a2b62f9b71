@@ -1,0 +1,5 @@
+package com.natwest.usersettings.model;
+
+public class User {
+
+}

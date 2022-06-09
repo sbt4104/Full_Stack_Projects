@@ -1,0 +1,23 @@
+
+<mat-card>
+    <mat-card-title style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center; ">{{myportfolio.name}}</mat-card-title><br>
+
+    <mat-card-content style="font-size:large; font-family: cursive; text-align: center;"><b>{{myportfolio.description}}</b>
+    </mat-card-content>
+    <mat-card-content style="font-size:large; font-family: cursive; text-align: center;"><b>{{myportfolio.totalPrice}}</b>
+    </mat-card-content>
+    <mat-card-actions>
+    <div class="button">
+    <button  (click)="open()" mat-fab><mat-icon style="align-items:center; " class="icon">card_travel</mat-icon></button>
+    &nbsp; &nbsp;
+
+    <button  (click)="delete()" mat-fab><mat-icon class="icon">delete</mat-icon></button>
+    &nbsp; &nbsp;
+    <button  (click)="list_stocks()" mat-fab><mat-icon class="icon">visibility</mat-icon></button>
+  </div>
+  </mat-card-actions>
+  </mat-card>
+
+
+
+

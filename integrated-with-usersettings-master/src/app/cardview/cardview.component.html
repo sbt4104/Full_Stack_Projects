@@ -1,0 +1,23 @@
+
+<mat-card style="border-radius: 2rem;">
+    <mat-card-title style="font-family:'Courier New', Courier, monospace;  text-align: center; "><b>{{myportfolio.name}}</b></mat-card-title><br>
+
+    <mat-card-content style="font-size:large; font-family:'Courier New', Courier, monospace;  text-align: center;">{{myportfolio.description}}
+    </mat-card-content>
+    <mat-card-content style="font-size:large; font-family:'Courier New', Courier, monospace; text-align: center;">Portfolio Amount: <b>{{myportfolio.totalPrice}}$</b>
+    </mat-card-content>
+    <mat-card-actions>
+    <div class="button">
+    <button  (click)="open()" mat-fab><mat-icon style="align-items:center; " class="icon">card_travel</mat-icon></button>
+    &nbsp; &nbsp;
+
+    <button  (click)="delete()" mat-fab><mat-icon class="icon">delete</mat-icon></button>
+    &nbsp; &nbsp;
+    <button  (click)="list_stocks()" mat-fab><mat-icon class="icon">visibility</mat-icon></button>
+  </div>
+  </mat-card-actions>
+  </mat-card>
+
+
+
+

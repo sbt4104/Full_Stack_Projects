@@ -1,0 +1,22 @@
+<div class="container">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Sign Up
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+            <input matInput class="username" name="username" placeholder="Enter your User Name" [formControl]="username"
+                required>{{validateName()}}
+        </mat-form-field>
+        <br><br>
+        <mat-form-field>
+            <input matInput class="password" name="password" placeholder="Set your password" type="password"
+                [formControl]="password" required>{{validatepassword()}}
+        </mat-form-field>
+        <br><br>
+        <button mat-raised-button color="primary" (click)='signUp()'>SignUp</button>
+
+    </mat-expansion-panel>
+</div>

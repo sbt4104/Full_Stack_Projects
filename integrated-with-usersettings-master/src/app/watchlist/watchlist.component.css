@@ -1,0 +1,46 @@
+.content{
+    position: absolute;
+    top: 10%;
+    
+}
+
+.mycontent
+{
+    position: relative;
+    width: 1000px;
+    color: black;
+}
+
+.HeaderToolbar
+{
+    justify-content: center;
+    font-size: 2rem;
+    height: 10%;
+    /* font-family: Garamond, serif; */
+    font-family: 'Courier New', Courier, monospace;
+}
+.btn
+{
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.keep-c-toggle-view 
+{
+    height: 20%;
+	margin-left: 95%;
+    margin-top: -2%;
+	cursor: pointer;
+}
+
+
+
+mat-card {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}

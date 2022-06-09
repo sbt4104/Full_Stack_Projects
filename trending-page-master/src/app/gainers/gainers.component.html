@@ -1,0 +1,39 @@
+
+<br>
+<div style="margin-left: 10vw; margin-right: 10vw;">
+    <h1>Top Gainer Today</h1>
+    <table >
+        <tr>
+            <th>Company</th>
+            <th>Open Price</th>
+            <th>Highest Price</th>
+            <!-- <th>Net Change(%)</th> -->
+        </tr>
+        <tr *ngFor="let comp of gainer?.data" class="gainer">
+            <td>{{comp.symbol}}</td>
+            <td>{{comp.openPrice}}</td>
+            <td>{{comp.highPrice}}</td>
+            <!-- <td>{{((comp.highPrice-comp.openPrice)/comp.openPrice)*100}}</td> -->
+        </tr>
+    </table>
+    
+    <br>
+    <h1>Top Losers Today</h1>
+    
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Open Price</th>
+            <th>Lowest Price</th>
+            <!-- <th>Net Change(%)</th> -->
+        </tr>
+        <tr *ngFor="let comp of loser?.data " class="loser"> 
+            <td>{{ comp.symbol}}</td>
+            <td>{{comp.openPrice}}</td>
+            <td>{{comp.lowPrice}}</td>
+            <!-- <td>{{(comp.highPrice-comp.openPrice)/comp.openPrice}}</td> -->
+        </tr>
+    </table>
+</div>
+    
+    

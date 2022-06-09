@@ -1,0 +1,17 @@
+.example-form {
+    width: 100%;
+    margin:auto;
+    padding:1em;
+    
+  
+    
+  }
+  
+  .example-full-width {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2ch;
+    padding-block-end: 2ch;
+    border-color: black;
+  }

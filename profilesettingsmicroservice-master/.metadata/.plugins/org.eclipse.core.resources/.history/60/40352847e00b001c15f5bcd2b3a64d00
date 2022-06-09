@@ -1,0 +1,72 @@
+package com.natwest.BankMicroservice.usercontroller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.natwest.BankMicroservice.exceptions.UserAlreadyPresentException;
+import com.natwest.BankMicroservice.exceptions.UserNotPresentException;
+import com.natwest.BankMicroservice.user.User;
+import com.natwest.BankMicroservice.userservice.UserService;
+
+@RestController
+public class UserController {
+
+	@Autowired
+	UserService userservice;
+	
+	@PostMapping("/api/user/registerUser")
+	public ResponseEntity<?> addUser(@RequestBody User usernew) {
+		try {
+			User added=userservice.addUser(usernew);
+			return new ResponseEntity<User>(added,HttpStatus.CREATED);
+		} catch (UserAlreadyPresentException e) {
+			// TODO Auto-generated catch block
+			return new ResponseEntity<String>(e.getMessage(),HttpStatus.CONFLICT);
+		}
+		
+		
+	}
+	
+	@GetMapping("/api/user")
+	public ResponseEntity<?> viewUsers() {
+		List<User> users=userservice.viewUsers();
+		return new ResponseEntity<List>(users,HttpStatus.OK);
+		
+	}
+	
+	@PutMapping("/api/user/updateUserDetails")
+	public ResponseEntity<?> updateUser(@RequestBody User userupdated) {
+		try {
+			User updated=userservice.updateUser(userupdated);
+			return new ResponseEntity<User>(updated,HttpStatus.FOUND);
+		} catch (UserNotPresentException e) {
+			// TODO Auto-generated catch block
+			return new ResponseEntity<String>(e.getMessage(),HttpStatus.NOT_FOUND);
+		}
+		
+	}
+	
+	@GetMapping("api/user/view/{userId}")
+	public ResponseEntity<?> viewbyId(@PathVariable("userId") String uId) {
+		try {
+			User view=userservice.viewbyId(uId);
+			return new ResponseEntity<User>(view,HttpStatus.FOUND);
+		} catch (UserNotPresentException e) {
+			// TODO Auto-generated catch block
+			return new ResponseEntity<String>(e.getMessage(),HttpStatus.NOT_FOUND);
+		}
+		
+	}
+	
+}

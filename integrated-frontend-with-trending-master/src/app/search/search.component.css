@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+  border-collapse: separate!important;
+border-spacing:0 4px!important;
+
+
+}
+.mat-header-cell
+{
+background-color: black;
+color: ivory;
+font-size: 20px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.make-green {
+  background-color: green;
+}
+
+.make-lightgreen{
+background-color: greenyellow;
+}
+
+.make-blue{
+background-color: cornflowerblue;
+}

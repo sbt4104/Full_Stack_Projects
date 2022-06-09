@@ -1,0 +1,33 @@
+.sidenav-container {
+  height: 100%;
+  
+}
+
+.sidenav {
+  width: 300px;
+  
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  background-color: indigo;
+  color: ivory;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.title-app
+{
+  background-color: white;
+  box-shadow: ivory;
+  color: black;
+}
+.avatar
+{
+  position: relative;
+  
+}

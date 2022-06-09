@@ -1,0 +1,23 @@
+img{
+    width: 35%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box{
+    margin-top: 2vh;
+    /* margin-left: 2vw; */
+}
+.title{
+    display: block;
+    text-align: center;
+}
+.data{
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+}
+/* .image-container {
+    display: flex;
+    justify-content: center;
+  } */

@@ -1,0 +1,5 @@
+package com.natwest.BankMicroservice.userfilter;
+
+public class UserJwtFilter {
+
+}

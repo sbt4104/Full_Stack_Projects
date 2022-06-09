@@ -1,0 +1,27 @@
+<mat-toolbar class="HeaderToolbar" style=" margin: 0%; padding: 0%; background-color:indigo;">
+  <span class="title-center" style="color:white; ">Welcome to your Watchlist</span>
+</mat-toolbar>
+
+
+
+<div class="content" style="margin-top: 5%;margin-left: 5%;width: 100%;">
+    <mat-tab-group animationDuration="0ms">
+        <!-- #enddocregion align-start -->
+          <mat-tab label="Search">
+              <div class = "mycontent">
+                  <app-search></app-search>
+            </div>
+
+          </mat-tab>
+        
+    
+          <mat-tab label="Mylist">
+            
+                <app-mylist></app-mylist>
+            
+          </mat-tab>
+          
+         </mat-tab-group>
+        
+        
+</div>
